@@ -3,6 +3,8 @@ name: Build
 on:
   push:
     branches: [master, main]
+    tags:
+      - "*.*.*"
 
 jobs:
   build_on_mac:
