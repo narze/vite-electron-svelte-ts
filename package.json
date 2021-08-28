@@ -1,10 +1,10 @@
 {
-  "name": "electron-vite-quick-start",
-  "version": "0.0.0",
+  "name": "vite-electron-svelte-ts",
+  "version": "0.1.0",
   "description": "A Electron application create by Vite",
   "main": "./dist/main/main.cjs.js",
-  "repository": "https://github.com/yingpengsha/electron-vite-quick-start.git",
-  "author": "Pengsha Ying <810998652@qq.com>",
+  "repository": "https://github.com/narze/vite-electron-svelte-ts.git",
+  "author": "Manassarn Manoonchai <manassarn@gmail.com>",
   "license": "MIT",
   "private": true,
   "workspaces": {

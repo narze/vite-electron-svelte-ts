@@ -4,40 +4,37 @@
  */
 const options = {
   config: {
-    productName: 'electron-vite',
-    appId: 'com.example.yourapp',
+    productName: "electron-vite-svelte",
+    appId: "com.example.yourapp",
     directories: {
-      output: 'build'
+      output: "build",
     },
-    files: [
-      'dist/renderer/**/*',
-      'dist/main/**/*'
-    ],
+    files: ["dist/renderer/**/*", "dist/main/**/*"],
     dmg: {
       contents: [
         {
           x: 410,
           y: 150,
-          type: 'link',
-          path: '/Applications'
+          type: "link",
+          path: "/Applications",
         },
         {
           x: 130,
           y: 150,
-          type: 'file'
-        }
-      ]
+          type: "file",
+        },
+      ],
     },
     mac: {
-      icon: 'public/icons/icon.icns'
+      icon: "public/icons/icon.icns",
     },
     win: {
-      icon: 'public/icons/icon.ico'
+      icon: "public/icons/icon.ico",
     },
     linux: {
-      icon: 'public/icons'
-    }
-  }
+      icon: "public/icons",
+    },
+  },
 }
 
 module.exports = options
