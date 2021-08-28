@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [master, main]
+
+jobs:
+  build_on_mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16.x
+      # - name: see directory in electron_dist
+      #   run: ls ./electron
+      # - name: add key to single keychain
+      #   run: security import ./electron/june-ai-single2-certs-electron.p12 -P ${{ secrets.CSC_KEY_PASSWORD }}
+      # - name: electron mac os security identities
+      #   run: security find-identity -v
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
+      - name: ls
+        run: ls ./build
+    # - uses: Shopify/upload-to-release@v1
+    #     with:
+    #       name: my-artifact
+    #       path: build/a.out
+    #       repo-token: ${{ secrets.GITHUB_TOKEN }}
+    # - uses: lucyio/upload-to-release@master
+    #   with:
+    #     name: lucyio/electron
+    #     path: ./electron_dist
+    #     action: unpublished
+    #     release_id: 0.x.x
+    #     release-repo: lucyio/electron
